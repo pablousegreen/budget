@@ -16,7 +16,7 @@ class UI {
     this.expenseList = document.getElementById("expense-list");
     this.itemList = [];
     this.itemID = 0;
-  }
+  }//end Constructor
 
   //submit budget form
   submitBudgetForm(){
@@ -38,7 +38,7 @@ class UI {
       this.budgetInput.value = '';
       this.showBalance();
     }
-  }
+  }//end submitBudgetForm
 
   showBalance(){
     console.log('Show balance');
@@ -58,7 +58,7 @@ class UI {
       this.balance.classList.remove('showRed', 'showGreen');
       this.balance.classList.add('showBlack');
     }
-  }
+  }// end showBalance
 
   submitExpenseForm(){
     const expenseValue = this.expenseInput.value;
@@ -166,7 +166,7 @@ class UI {
     this.showBalance();
   }
 
-}/////UI CLASS
+}/////END UI CLASS
 
 function eventListeners(){
   console.log("I N I T");
@@ -193,6 +193,7 @@ function eventListeners(){
   //expenseList click
   expenseList.addEventListener('click', (event)=>{
    if(event.target.parentElement.classList.contains('edit-icon')){
+     console.log("-----> E D I T : ", event.target.parentElement);
     ui.editExpense(event.target.parentElement);
    }    
    else if(event.target.parentElement.classList.contains('delete-icon')){

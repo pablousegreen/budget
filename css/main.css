@@ -104,6 +104,7 @@ body {
 .showBlack {
   color: var(--mainDark);
 }
+/*MEDIA QUERYS*/
 @media screen and (min-width: 992px) {
   .budget {
     font-size: 2.6rem;
